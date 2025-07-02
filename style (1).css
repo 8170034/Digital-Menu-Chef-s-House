@@ -1,0 +1,150 @@
+/* --- Μεταβλητές και Γενικές Ρυθμίσεις --- */
+:root {
+    --primary-font: 'Montserrat', sans-serif;
+    --base-text-color: #333;
+    --secondary-text-color: #666;
+    --accent-color: #e69a00;
+    --background-color: #f9f9f9;
+    --container-bg-color: #ffffff;
+    --border-color: #ebebeb;
+}
+
+body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--base-text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 40px;
+    background-color: var(--container-bg-color);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    border-radius: 12px;
+}
+
+/* --- Header --- */
+header {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    color: var(--secondary-text-color);
+    margin: 5px 0;
+}
+
+/* --- Menu Sections --- */
+.menu-section {
+    margin-bottom: 50px;
+}
+
+.menu-section h2 {
+    font-size: 2.4em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.menu-section h2::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    margin: 12px auto 0;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 10px;
+    border-bottom: 1px dashed var(--border-color);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    border-radius: 8px;
+}
+
+.menu-item:hover {
+    transform: scale(1.02);
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border-bottom-color: transparent;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-details h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #444;
+}
+
+.item-details p {
+    margin: 0;
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+}
+
+.price {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 30px 0 10px 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #888;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: text-decoration 0.2s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+    header h1 { font-size: 2.5em; }
+    .menu-section h2 { font-size: 2em; }
+    .item-details h3, .price { font-size: 1.1em; }
+}
